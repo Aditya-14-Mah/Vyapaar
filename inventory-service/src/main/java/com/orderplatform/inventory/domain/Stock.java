@@ -51,6 +51,9 @@ public class Stock {
 
     /** Move {@code qty} back from reserved to available (compensation / release). */
     public void release(int qty) {
+        if (qty <= 0) {
+            throw new IllegalArgumentException("quantity must be positive");
+        }
         int toRelease = Math.min(qty, reservedQty);
         reservedQty -= toRelease;
         availableQty += toRelease;
