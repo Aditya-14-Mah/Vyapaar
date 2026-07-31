@@ -25,7 +25,7 @@ export default function Nav() {
               <span className="nav-user">
                 {username}{isAdmin && <span className="role-tag">ADMIN</span>}
               </span>
-              <button className="btn btn-ghost sm" onClick={() => { logout(); navigate('/login'); }}>
+              <button className="btn btn-ghost sm" onClick={() => { logout(); navigate('/'); }}>
                 Logout
               </button>
             </div>
